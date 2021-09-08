@@ -33,6 +33,8 @@ Selain digunakan untuk pengembangan web, spring framework juga biasanya biasanya
 
 7. Apa perbedaan dari @RequestParam dan @PathVariable? Kapan sebaiknya
 menggunakan @RequestParam atau @PathVariable?
+@RequestParam digunakan untuk mendapatkan parameter permintaan dari URL atau disebut query parameters, Sedangkan @PathVariable mengekstrak value dari URL. @RequestParam berguna untuk aplikai web yang bersifat tradisional yang mana datanya diteruskan dalam parameter query sementara. @PathVariable berguna untuk layanan web dengan framwork RESTfun yang mana URL-nya berisi value.
+
 ### What I did not understand
 (tuliskan apa saja yang kurang Anda mengerti, Anda dapat men-_check_ apabila Anda
 sudah mengerti dikemudian hari, dan tambahkan tulisan yang membuat Anda mengerti)
@@ -40,3 +42,12 @@ sudah mengerti dikemudian hari, dan tambahkan tulisan yang membuat Anda mengerti
 - [ ] Apa itu Interface Segregation Principle (ISP)?
 - [ ] Apa itu Inversion of Control (IoC)?
 - [ ] Kenapa APAP sulit?
+
+### Referensi
+* https://www.geeksforgeeks.org/introduction-apache-maven-build-automation-tool-java-projects/
+* https://www.idtech.com/blog/what-are-libraries-in-coding
+* https://coderslegacy.com/what-are-dependencies-in-programming/
+* https://reqtest.com/requirements-blog/what-are-benefits-of-version-control/
+* https://devblogs.microsoft.com/devops/squash-a-whole-new-way-to-merge-pull-requests/
+* https://cloudfour.com/thinks/squashing-your-pull-requests/ 
+* https://www.zendesk.com/blog/issue-tracker/
