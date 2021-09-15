@@ -25,6 +25,9 @@ Jawaban:
 Contoh bioskop yang saya buat:
 http://localhost:8080/bioskop/add?idBioskop=3&namaBioskop=Bioskop%20Shafna&alamat=Jalan%20Jalan%20Pachill&noTelepon=0804xxx&jumlahStudio=99
 
+Screen shot hasil :
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-2-21cineplux/ScreenShot/SS_no5_FikraShafna.jpg)
+
 ---
 
 ## Tutorial 1
