@@ -1,6 +1,31 @@
 # Tutorial APAP
 ## Authors
 * **Fikra Shafna Rahmania Putri Setyawan** - *1906304175* - *APAP-C*
+---
+## Tutorial 2
+#### Pertanyaan 1: Cobalah untuk menambahkan sebuah Bioskop dengan mengakses link berikut: http://localhost:8080/bioskop/add?idBioskop=1&namaBioskop=Bioskop%20PAPA%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx&jumlahStudio=10 Apa yangterjadi? Jelaskan mengapa hal tersebut dapat terjadi
+Jawaban: Jika link tersebut diakses akan memunculkan Whitelabel Error Page Service Error 500. Hal ini dikarenakan sudah ada perintah return "add-bioskop" pada controller. Controller merupakan file yang berfungsi untuk melakukan mapping dari request yang diinput, kemudian akan diminta untuk memanggil template html yang akan direturn. Sedangkan html "add-bioskop" belum dibuat, sehinnga hal ini akan menyebabkan error.
+
+#### Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja @Autowired tersebut dalam konteks service dan controller yang telah kamu buat
+Jawaban: Anotasi @Autowired pada Controller merupakan implementasi dari konsep **dependancy injection**. @Autowired dapat memasukkan dependensi objek secara implisit. Sehingga, @Autowired pada BioskopController tidak perlu dibuat constructor, setter, dan getter. Hal ini dikarenakan @Autowired otomatis mencari service yang mengimplementasikan interface BioskopService.
+
+#### Pertanyaan 3: Cobalah untuk menambahkan sebuah Bioskop dengan mengakses link berikut:http://localhost:8080/bioskop/add?idBioskop=1&namaBioskop=Bioskop%20PAPA%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi.
+Jawaban: Jika link tersebut diakses akan memunculkan Whitelabel Error Page type=Bad Request status=400. Hal ini dikarenakan parameter **jumlah studio** tidak dicantumkan. Sedangkan seluruh atribut harus terisi dan tidak boleh null.
+
+#### Pertanyaan 4: Jika Papa APAP ingin melihat Bioskop dengan nama Bioskop Maung,link apa yang harus diakses?
+Jawaban:
+Bioskop dengan nama Bioskop Maung bisa diakses melalui link:
+http://localhost:8080/bioskop/add?idBioskop=2&namaBioskop=Bioskop%20Maung&alamat=Maung%20Fasilkom&noTelepon=081xxx&jumlahStudio=10
+
+Untuk mengaksesnya bisa diakses di:
+http://localhost:8080/bioskop/view?idBioskop=2
+
+#### Pertanyaan 5: Tambahkan 1 contoh Bioskop lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/bioskop/viewall , apa yang akan ditampilkan? Sertakan juga bukti screenshotmu.
+Jawaban:
+Contoh bioskop yang saya buat:
+http://localhost:8080/bioskop/add?idBioskop=3&namaBioskop=Bioskop%20Shafna&alamat=Jalan%20Jalan%20Pachill&noTelepon=0804xxx&jumlahStudio=99
+
+---
 
 ## Tutorial 1
 ### What I have learned today
