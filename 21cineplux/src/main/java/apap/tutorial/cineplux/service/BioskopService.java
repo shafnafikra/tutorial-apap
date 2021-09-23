@@ -1,17 +1,13 @@
 package apap.tutorial.cineplux.service;
-
 import apap.tutorial.cineplux.model.BioskopModel;
+import apap.tutorial.cineplux.model.PenjagaModel;
+
 import java.util.List;
 
-public interface BioskopService{
-    //Method untuk menambah Bioskop
+public interface BioskopService {
     void addBioskop(BioskopModel bioskop);
-
-    //Method untuk mendapatkan daftar Bioskop yang telah tersimpan
+    void updateBioskop(BioskopModel bioskop);
     List<BioskopModel> getBioskopList();
-
-    //Method untuk mendapatkan data sebuah Bioskop berdasarkan idnya
-    BioskopModel getBioskopByIdBioskop(String idBioskop);
-
-    void deleteBioskop(BioskopModel bioskop);
+    BioskopModel getBioskopByNoBioskop(Long noBioskop);
+    BioskopModel deleteBioskop(BioskopModel bioskop);
 }
