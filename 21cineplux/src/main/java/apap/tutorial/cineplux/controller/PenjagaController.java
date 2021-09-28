@@ -38,6 +38,12 @@ public class PenjagaController {
             @ModelAttribute PenjagaModel penjaga,
             Model model
     ){
+        BioskopModel bioskop = penjaga.getBioskop();
+        for(PenjagaModel baru : bioskop.getListPenjaga()){
+            if(penjaga.getNamaPenjaga().equals(baru.getNamaPenjaga())){
+                return "penjaga-ada";
+            }
+        }
         penjagaService.addPenjaga(penjaga);
         model.addAttribute("noBioskop", penjaga.getBioskop().getNoBioskop());
         model.addAttribute("namaPenjaga", penjaga.getNamaPenjaga());
