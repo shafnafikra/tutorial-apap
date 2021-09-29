@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>21Cineplux</title>
+  <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+  <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+  <h2>Daftar Seluruh Film</h2>
+  <br>
+  <div th:each="film : ${listFilm}" class="card m-4 p-4">
+    <div class="card-body">
+      <div class="justify-content-center">
+        <p th:text="'Nomor Film : ' + ${film.noFilm}"></p>
+        <p th:text="'Nama Film : ' + ${film.namaFilm}"></p>
+        <p th:text="'Deskripsi Film : ' + ${film.deskripsiFilm}"></p>
+        <p th:if="${film.isDisplaying == 0}" th:text="'Sedang Tayang : YA'"></p>
+        <p th:if="${film.isDisplaying == 1}" th:text="'Sedang Tayang : TIDAK'"></p>
+        <br>
+      </div>
+    </div>
+    <br>
+  </div>
+  <a class="btn btn-primary" href="/">Home</a>
+</div>
+
+</body>
+
+</html>

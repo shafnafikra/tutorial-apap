@@ -29,7 +29,12 @@ public class FilmModel implements  Serializable{
 
     @NotNull
     @Column(nullable = false)
-    private boolean isDisplaying;
+    private int isDisplaying;
+
+    @NotNull
+    @Size(max = 100)
+    @Column(nullable = false)
+    private String deskripsiFilm;
 
     //Relasi dengan BioskopModel
     @ManyToMany(mappedBy = "listFilm")
