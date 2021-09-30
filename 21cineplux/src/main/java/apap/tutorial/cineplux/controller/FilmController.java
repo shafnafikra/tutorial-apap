@@ -40,4 +40,5 @@ public class FilmController {
         model.addAttribute("listFilm", filmService.getListFilm());
         return "viewall-film";
     }
+
 }

@@ -32,9 +32,9 @@
     </button>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <a class="nav-item nav-link active text-secondary" th:href="@{/}">
-                Home<span class="sr-only">(current)</span>
-            </a>
+            <li th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'font-weight-bold':''}"><a class="nav-item nav-link active text-secondary" th:href="@{/}"><span>Home</span></a></li>
+            <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/bioskop') ? 'font-weight-bold':''}"><a class="nav-item nav-link active text-secondary" th:href="@{/bioskop/viewall/}"><span>Bioskop</span></a></li>
+            <li th:classappend="${#httpServletRequest.getRequestURI().startsWith('/film') ? 'font-weight-bold':''}"><a class="nav-item nav-link active text-secondary" th:href="@{/film/viewall/}"><span>Film</span></a></li>
         </ul>
         <form class="form-inline my-2 my-lg-0" th:action="@{/bioskop/view}" method="GET">
             <input class="form-control mr-sm-2" type="search"

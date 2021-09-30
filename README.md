@@ -6,6 +6,22 @@
 
 ---
 
+## Tutorial 4
+
+### Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
+
+th:replace dan th:include adalah bentuk dari host tag. Kedua host tag ini mengimplementasikan bentuk fragment yang disediakan dari Thymeleaf. Fragment di sini merupakan reusable class yang mengimplement beberapa fitur. th:include merupakan akan memasukkan konten yan ada di fragments ke dalam tag hostnya, sedangakn th:replace memiliki fungsi untuk mengganti tag host dengan fragment yang artinya menghapus tag host dan sebagai pengganti tag host. Hal ini akan menambahkan fragment yang ditentukan termasuk tag fragment.
+
+### Pertanyaan 2: Jelaskan apa fungsi dari th:object!
+
+th:object digunakan untuk menentukan objek yang akan diisi. Selain itu, th:object juga akan digunakan untuk submit pada form. Dengan demikian akan mengetahui object apa yang di submit.
+
+### Pertanyaan 3: Jelaskan perbedaan dari \* dan $ pada saat penggunaan th:object! Kapan harus dipakai?
+
+perbedaan \* dan $ terdapat pada apa yang akan evaluasi, \_ akan mengavaluasi atribut atau variabel dari th:object yang sebelumnya sudah di-declare, sedangkan $ akan mengevaluasi keseluruhan atribut/variabel yang ada pada th:object.
+
+---
+
 ## Tutorial 3
 
 #### Pertanyaan 1: Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model (@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
