@@ -44,7 +44,8 @@ public class PenjagaController {
         return "add-penjaga";
     }
 
-    @GetMapping("/penjaga/update/{noPenjaga}")
+    // @{/penjaga/update/} + ${bioskop.noBioskop}+'/NoPenjaga/' +${penjaga.noPenjaga}
+    @GetMapping("/penjaga/update/{noBioskop}/NoPenjaga/{noPenjaga}")
     public String updatePenjagaForm(
             @PathVariable Long noPenjaga,
             Model model
@@ -72,28 +73,44 @@ public class PenjagaController {
         }
     }
 
-    @GetMapping("/penjaga/delete/{noPenjaga}")
-    public String deletePenjaga(
-            @PathVariable Long noPenjaga,
+//    @GetMapping("/penjaga/delete/{noPenjaga}")
+//    public String deletePenjaga(
+//            @PathVariable Long noPenjaga,
+//            Model model
+//    ){
+//        PenjagaModel penjaga = penjagaService.getPenjagaByNoPenjaga(noPenjaga);
+//        model.addAttribute( "penjaga",penjaga);
+//
+//        if(penjagaService.getPenjagaList().contains(penjaga)){
+//            if(penjagaService.deletePenjaga(penjaga) == null){
+//                return "bioskop-buka";
+//            }
+//            else {
+//                model.addAttribute("noBioskop", penjaga.getBioskop().getNoBioskop());
+//                model.addAttribute("noPenjaga", penjaga.getNoPenjaga());
+//                penjagaService.deletePenjaga(penjaga);
+//                return "delete-penjaga";
+//            }
+//        }else{
+//            return "null-penjaga";
+//        }
+//
+//    }
+
+    @PostMapping("/penjaga/delete")
+    public String deletePenjagaSubmit(
+            @ModelAttribute BioskopModel bioskop,
             Model model
     ){
-        PenjagaModel penjaga = penjagaService.getPenjagaByNoPenjaga(noPenjaga);
-        model.addAttribute( "penjaga",penjaga);
-
-        if(penjagaService.getPenjagaList().contains(penjaga)){
+        model.addAttribute("noBioskop", bioskop.getNoBioskop());
+        for (PenjagaModel penjaga:
+        bioskop.getListPenjaga()){
             if(penjagaService.deletePenjaga(penjaga) == null){
                 return "bioskop-buka";
             }
-            else {
-                model.addAttribute("noBioskop", penjaga.getBioskop().getNoBioskop());
-                model.addAttribute("noPenjaga", penjaga.getNoPenjaga());
-                penjagaService.deletePenjaga(penjaga);
-                return "delete-penjaga";
-            }
-        }else{
-            return "null-penjaga";
+            penjagaService.deletePenjaga(penjaga);
         }
-
+        return "delete-penjaga";
     }
 
 }

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Studio</title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 </head>
+
 <body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
 <h1 th:text="'Bioskop dengan ID ' + ${bioskop.idBioskop} + ' berhasil diupdate'"></h1>
 <h2>Detail Update Studio Bioskop</h2>
 <h3 th:text="'Id Bioskop ' + ${bioskop.idBioskop}"></h3>
