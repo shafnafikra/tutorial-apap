@@ -70,6 +70,11 @@ public class BioskopRestServiceImpl implements BioskopRestService {
         }
     }
 
+    @Override
+    public List<BioskopModel> getBioskopByJumlahStudio(Integer jumlahStudio) {
+        return bioskopDB.findByJumlahStudio(jumlahStudio);
+    }
+
     public BioskopRestServiceImpl(WebClient.Builder webclientBuilder){
         this.webClient = webclientBuilder.baseUrl(Setting.bioskopUrl).build();
     }

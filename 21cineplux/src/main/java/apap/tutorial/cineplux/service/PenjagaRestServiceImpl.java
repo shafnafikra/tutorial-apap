@@ -89,6 +89,7 @@ public class PenjagaRestServiceImpl implements PenjagaRestService {
         }
     }
 
+
 //    @Override
 //    public Mono<String> getStatus(Long noPenjaga) {
 //        return this.webClient.get().uri( "rest/penjaga/" + noPenjaga + "/status").retrieve().bodyToMono(String.class);

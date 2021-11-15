@@ -17,8 +17,9 @@ public interface BioskopRestService {
 
     void deleteBioskop(Long noCabang);
 
+    List<BioskopModel> getBioskopByJumlahStudio(Integer jumlahStudio);
+
     Mono<String> getStatus(Long noBioskop);
     Mono<BioskopDetail> postStatus();
-
 
 }
