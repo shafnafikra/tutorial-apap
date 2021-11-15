@@ -6,6 +6,27 @@
 
 ---
 
+## Tutorial 5
+
+### Pertanyaan 1: Apa itu Postman? Apa kegunaannya?
+
+Postman adalah sebuah developent tool API yang digunakan untuk build, modify, dan test API. Penggunaan Postman dapat digunakan untuk mendesign, mock, debug, tes, dokumentasi, monitor, dan juga menerbitkan API. Postman memiliki fungsi REST Client yang dapat digunakan untuk menguji REST API.
+
+### Pertanyaan 2: Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty.
+
+@JsonIgnoreProperties digunnakan untuk memberikan spesifikasi list atribut dari sebuah class yang diabaikan saat menjalankan serialization dan deserialozation JSON. Jika @JsonIgnoreProperties tidak disertakan, nantinya akan menyebabkan error saat menjalankan serialization dan deserialization saat Java Object tidak memiliki field yang ada pada JSON.
+
+### Pertanyaan 3: Apa kegunaan atribut WebClient?
+
+Kegunaan dari Webclient adalah untuk menghubungkan personal komputer ke jaringan internet yang meminta informasi. Dalam mengakses webserver diperlukan sebuah WebClient untuk menggunakan aplikasi yaitu WebBrowser.
+
+### Pertanyaan 4: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+
+ResponseEntity merupakan representasi keluruhan HTTP Response dari status code, header, dan body. Dengan demikian, dapat digunakan untuk mengkonfigurasi secara lengkap HTTP response.
+BindingResult adalah sebuah objek spring yang akan menyimpan hasil validasi, binding, dan error dari model objek yang divalidasikan. Penggunaan BindingResult diletakkan setelah parameter objek divalidasi.
+
+---
+
 ## Tutorial 4
 
 ### Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!

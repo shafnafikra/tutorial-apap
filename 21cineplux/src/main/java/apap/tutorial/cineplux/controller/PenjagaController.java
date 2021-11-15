@@ -104,7 +104,7 @@ public class PenjagaController {
     ){
         model.addAttribute("noBioskop", bioskop.getNoBioskop());
         for (PenjagaModel penjaga:
-        bioskop.getListPenjaga()){
+                bioskop.getListPenjaga()){
             if(penjagaService.deletePenjaga(penjaga) == null){
                 return "bioskop-buka";
             }
