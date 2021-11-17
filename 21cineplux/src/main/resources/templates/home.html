@@ -12,7 +12,11 @@
 <nav th:replace="fragments/fragment :: navbar"></nav>
 <div class="d-flex justify-content-center">
     <div class="m-4">
+<!--        Tambahan dari lab 6     -->
+        <h2 th:text=" 'Hello ' +  ${#httpServletRequest.remoteUser} + '!'"> Login As</h2>
         <h2>Selamat datang di 21Cineplux</h2>
+<!--        end           -->
+
         <div class="d-flex justify-content-center">
             <a th:href="@{/bioskop/viewall}" class="mx-2 btn btn-warning">Lihat semua bioskop</a>
             <a th:href="@{/bioskop/add}" class="mx-2 btn btn-outline-warning">Tambah bioskop</a>
@@ -20,6 +24,16 @@
         <div class="my-3 d-flex justify-content-center">
             <a th:href="@{/film/viewall}" class="mx-2 btn btn-warning">Lihat semua film</a>
             <a th:href="@{/film/add}" class="mx-2 btn btn-outline-warning">Tambah film</a>
+        </div>
+<!--        <p th:text="${role}"></p>-->
+        <section th:if="${role} == 'ADMIN'">
+            <div class="my-3 d-flex justify-content-center">
+            <a th:href="@{/user/add}" class="mx-2 btn btn-outline-warning">Tambah User Baru</a>
+        </div>
+        </section>
+
+        <div class="my-3 d-flex justify-content-center">
+            <a th:href="@{/user/updatePassword}" class="mx-2 btn btn-outline-warning">Ganti Password</a>
         </div>
     </div>
 </div>

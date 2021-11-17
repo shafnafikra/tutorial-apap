@@ -72,6 +72,13 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 
+<!--		Addition from lab 6			-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

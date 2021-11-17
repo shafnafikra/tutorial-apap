@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>21Cineplux</title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<div class="container">
+    <h2>Daftar Seluruh User</h2>
+    <br>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>email</th>
+            <th>Nama</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user, iterationStatus : ${listUser}"
+            th:style="${iterationStatus.even} ? 'font-weight:bold;'">
+            <td th:text="${iterationStatus.count}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.nama}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.role.role} == 1">ADMIN</td>
+            <td th:text="${user.role.role} == 2">MANAGER</td>
+            <td th:text="${user.role.role} == 3">USER</td>
+            <td>
+              <a class="btn btn-danger" th:href="@{/user/delete/} + ${user.id}">Delete</a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    </form>
+
+    <div class="container">
+    </div>
+    <div th:unless = "*{listUser.size() != 0}">
+        <h2 th:text = "'Tidak ada User'"></h2>
+    </div>
+    <a class="btn btn-primary" href="/">Home</a>
+</div>
+</div>
+</div>
+</body>
+
+</html>
