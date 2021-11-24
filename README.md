@@ -22,7 +22,7 @@ Pada soal satu ini, saya membuat method hanleDeleteItemToCart. Secara garis besa
 
 ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_add_del.jpg)
 
-Pertama, saya membuat method increseBalance dan decreaseBalance yang nanti akan dipanggil di handleAddItemToCart dan handleDeleteItemFromCart
+Pertama, saya membuat method increaseBalance dan decreaseBalance yang nanti akan dipanggil di handleAddItemToCart dan handleDeleteItemFromCart
 
 - Nomor 3
 

@@ -52,7 +52,7 @@ export default class Home extends React.Component {
     }
   };
 
-  handleDeleteItemToCart = (item) => {
+  handleDeleteItemFromCart = (item) => {
     const newItems = [...this.state.cartItems];
     const newItem = { ...item };
     const targetInd = newItems.findIndex((it) => it.id === newItem.id);
@@ -103,7 +103,7 @@ export default class Home extends React.Component {
                 <List
                   title="My Cart"
                   items={this.state.cartItems}
-                  onItemClick={this.handleDeleteItemToCart}
+                  onItemClick={this.handleDeleteItemFromCart}
                 ></List>
               </div>
             ) : (
