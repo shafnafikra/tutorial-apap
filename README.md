@@ -23,7 +23,8 @@ Pada soal satu ini, saya membuat method hanleDeleteItemToCart. Secara garis besa
 Pertama, saya membuat method increseBalance dan decreaseBalance yang nanti akan dipanggil di handleAddItemToCart dan handleDeleteItemFromCart
 
 - Nomor 3
-  ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_alert.jpg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_alert.jpg)
 
 Untuk memunculkan alert balance tidak mencukupi, saya menambahkan memanggil method alert pada decreaseBalace.
 
