@@ -18,7 +18,7 @@ Pada soal satu ini, saya membuat method hanleDeleteItemToCart. Secara garis besa
 
 - Nomor 2
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/ScreenShot/tutorial7_in_dec_price.jpg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_in_dec_price.jpg)
 
 ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_add_del.jpg)
 
