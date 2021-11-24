@@ -11,12 +11,14 @@
 ### Pertanyaan 1: Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
 
 - Nomor 1
-  ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_handledelete_awal.jpg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_handledelete_awal.jpg)
 
 Pada soal satu ini, saya membuat method hanleDeleteItemToCart. Secara garis besar, isi dari method ini sama dengan handleAddItemToCart. Namun, pada method ini, terdapat kondisi dimana targetInd lebih besar sama dengan 0 (nol), kemudian membuat value dari newItem.inCart menjadi false. Kemudian, memanggil method **splice** dengan parameter (targetInd, 1). Tidak lupa, saya memamnggil this.handleDeleteItemToCart pada button, agar dapat di-delete.
 
 - Nomor 2
-  ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/ScreenShot/tutorial7_in_dec_price.jpg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/ScreenShot/tutorial7_in_dec_price.jpg)
 
 ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_add_del.jpg)
 
