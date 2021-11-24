@@ -6,6 +6,52 @@
 
 ---
 
+## Tutorial 6
+
+### Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
+
+Otentikasi adalah proses melakukan verifikasi apakah pengguna yang ingin melakukan login dengan username yang dimiliki terlah tersedia di database dan dapat masuk untuk mengakses aplikasi. Sedangkan, otorisasi adalah proses untuk menentukan hak pengguna apakah pengguna tersebut memiliki akses ke halaman tertentu yang telah ditentukan otentifikasinya.
+
+Implementasi otentikasi pada class WebSecurityConfig
+
+```
+@Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception{
+        auth.userDetailsService(userDetailsService).passwordEncoder(encoder());
+    }
+```
+
+Implementasi otorisasi pada class WebSecurityConfig
+
+```
+.authorizeRequests()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/js/**").permitAll()
+                .antMatchers("/user/add").hasAuthority("ADMIN")
+                .antMatchers("/user/viewall").hasAuthority("ADMIN")
+                .antMatchers("/user/delete").hasAuthority("ADMIN")
+                .antMatchers("/penjaga/**").hasAuthority("MANAGER")
+                .anyRequest().authenticated()
+```
+
+### Pertanyaan 2: Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya.
+
+BCryptPasswordEncoder merupakan sebuah class yang mengimplementasikan PasswordEncoder dan juga menyediakan password hashing. Untuk melakukan register password, tidak mngkin dengan menggunakan plaintext, maka penyimpanan password mengguakan hashing. BCryptPasswordEncoder bekerja dengan menyimpan password yang telah di-hashing terlebih dahulu.
+
+### Pertanyaan 3: Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
+
+Encryption dan hashing merupakan dua istilah yang berbeda. Encryption adalah proses mengubah sebuah pesan normal (plaintext) menjadi pesan yang tidak mudah dibaca (ciphertext). Ciphertext yang diperoleh dari encryption dapat dengan mudah diubah menjadi plaintext menggunakan encryption key. Hashing adalah proses mengubah informasi menjadi kunci menggunakan hash function. Informasi asli tidak dapat diambil dari hash key dengan cara apapun. Dengan demikian, penyimpanan password akan lebih aman jika dilakukan dengan hashing daripada encryption.
+
+### Pertanyaan 4: Jelaskan secara singkat apa itu UUID beserta penggunaannya!
+
+UUID (Universally Unique Identifier) merupakan kode dengan jumlah hashing terbanyak yaitu sebanyak 32 karakter yang akan digunakan untuk keamanan data. UUID di-generate untuk id pengguna. Dibandingkan dengan BCrypt yang merupakan password yang berguna untuk mengamankan id dari hacking. Dapat dipastikan UUID yang tergenerate unik untuk tiap objek yang ada di internet, jadi id yang dimiliki pengguna akan aman.
+
+### Pertanyaan 5: Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut padahal kita sudah memiliki class UserRoleServiceImpl.java?
+
+class UserDetailsServiceImpl.java memberikan informasi mengenai Otentikasi dan Otorisasi akun yang ada pada class lain. Class ini harus diimplementasikan, jika tidak informasi tersebut tidak dapat diberikan. Kemampuan tersebut ada karena class mengimplementasikan UserDetailService. UserDetailService merupakan interface yang ada dari Spring Security. Selain itu, class ini meng-override loadUserByUsername() yang bisa dilakukan kustomisasi untuk pencarian user.
+
+---
+
 ## Tutorial 5
 
 ### Pertanyaan 1: Apa itu Postman? Apa kegunaannya?

@@ -5,12 +5,15 @@ import apap.tutorial.cineplux.model.FilmModel;
 import apap.tutorial.cineplux.model.PenjagaModel;
 import apap.tutorial.cineplux.service.BioskopService;
 import apap.tutorial.cineplux.service.FilmService;
+import apap.tutorial.cineplux.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util. ArrayList;
 import java.util.List;
 
@@ -23,6 +26,9 @@ public class BioskopController {
 
     @Autowired
     FilmService filmService;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping("/bioskop/add")
     public String addBioskopForm(Model model) {
@@ -93,7 +99,7 @@ public class BioskopController {
 
     @GetMapping("/bioskop/view")
     public String viewDetailBioskop(
-            @RequestParam(value = "noBioskop") Long noBioskop,
+            @RequestParam(value = "noBioskop") Long noBioskop, HttpServletRequest httpsr,
             Model model
     ) {
         BioskopModel bioskop = bioskopService.getBioskopByNoBioskop(noBioskop);
@@ -102,6 +108,9 @@ public class BioskopController {
             model.addAttribute( "bioskop", bioskop);
             model.addAttribute("listPenjaga", listPenjaga);
             model.addAttribute("listFilm", bioskop.getListFilm());
+            Principal princ = httpsr.getUserPrincipal();
+            String role = userService.getUserbyUsername(princ.getName()).getRole().getRole();
+            model.addAttribute("role", role);
             return "view-bioskop";
         }else {
             return "null-bioskop";
