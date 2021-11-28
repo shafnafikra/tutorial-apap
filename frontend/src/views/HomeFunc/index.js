@@ -77,6 +77,7 @@ function App() {
     setCartItems(newItems);
   }
 
+
   return (
     <div className="container-fluid">
       <h1 className="text-center mt-3 mb-0">Mini Commerce</h1>
