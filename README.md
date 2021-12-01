@@ -6,6 +6,61 @@
 
 ---
 
+# Tutorial 7
+
+### Pertanyaan 1: Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+
+- Nomor 1
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_handledelete_awal.jpg)
+
+Pada soal satu ini, saya membuat method hanleDeleteItemToCart. Secara garis besar, isi dari method ini sama dengan handleAddItemToCart. Namun, pada method ini, terdapat kondisi dimana targetInd lebih besar sama dengan 0 (nol), kemudian membuat value dari newItem.inCart menjadi false. Kemudian, memanggil method **splice** dengan parameter (targetInd, 1). Tidak lupa, saya memamnggil this.handleDeleteItemToCart pada button, agar dapat di-delete.
+
+- Nomor 2
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_in_dec_price.jpg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_add_del.jpg)
+
+Pertama, saya membuat method increaseBalance dan decreaseBalance yang nanti akan dipanggil di handleAddItemToCart dan handleDeleteItemFromCart
+
+- Nomor 3
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial7_alert.jpg)
+
+Untuk memunculkan alert balance tidak mencukupi, saya menambahkan memanggil method alert pada decreaseBalace.
+
+### Pertanyaan 2: Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+
+- props yang merupakan singkatan dari property adalah masukkan dari sebuah komponen. Nilai dari prop di-passing seperti atribut HTML dan bersifat read-only. Dengan demikian props biasanya digunakan untuk komunikasi antar component.
+- state merupakan data private dati component. Data pada state tidak dapat diakses dari component lain atau hanya tersedia pada component tersebut. Jika dibandingkan dengan props, value pada props dilempar dari component lain, sedangkan state menyimpan dan mengubah data sendiri dari dalam coomponentnnya.
+
+### Pertanyaan 3: Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam React? sebutkan alasannya.
+
+Component pada react memiliki sifat yang _reusable_ yang dapat digunakan kembali. Dengan menggunakan component, penyusunan code akan jauh lebih mudah untuk dibaca. Sehingga, mudah untuk memperbaiki error. Dengan demikian, bisa dikatakan bahwa penggunaan component sebaiknya digunakan.
+
+### Pertanyaan 4: Apa perbedaan class component dan functional component?
+
+|                           Class Component                            |                                   Functional Component                                   |
+| :------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
+| Component dan membuat fungsi render yang mengembalikan elemen React. | Sebuah fungsi JavaScript yang menerima props sebagai argument dan me-return elemen React |
+|        harus memiliki metode render() yang mengembalikan HTML        |            Tidak ada metode render yang digunakan dalam komponen fungsional.             |
+|            Menggunakan constructor untuk menyimpan status            |                              tidak menggunakan constructor.                              |
+
+### Pertanyaan 5: Dalam react, apakah perbedaan component dan element?
+
+|                                                                      Component                                                                      |                                                         Element                                                          |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+| Component adalah objek sederhana yang menggambarkan DOM node dan atribut atau propertinya. Component terdiri dari elemen dan memiliki fungsi render | Element adalah objek biasa yang menjelaskan apa yang akan ditampilkan dalam bentuk DOM . Elemen berisi tipe dan properti |
+
+#### Referensi:
+
+- https://www.mahirkoding.com/tutorial-react-perbedaan-state-dan-props/
+- https://medium.com/coderupa/react-prop-state-apa-bedanya-7ee61df8257f
+- https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/
+
+---
+
 ## Tutorial 6
 
 ### Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
