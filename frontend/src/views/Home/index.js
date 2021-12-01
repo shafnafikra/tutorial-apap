@@ -76,20 +76,18 @@ export default class Home extends React.Component {
     return (
       <div className="container-fluid">
         <h1 className="text-center mt-3 mb-0">Mini Commerce</h1>
+        <Link to="/cart">
         <div style={{ position: "fixed", top: 25, right: 25 }}>
-          <Fab variant="extended" onClick={this.handleToggle}>
-            {this.state.cartHidden ? (
+          <Fab variant="extended">
               <Badge
                 color="secondary"
                 badgeContent={this.state.cartItems.length}
               >
                 <ShoppingCartIcon />
               </Badge>
-            ) : (
-              <ViewStreamIcon />
-            )}
           </Fab>
         </div>
+        </Link>
         <p className="text-center text-secondary text-sm font-italic">
           (this is a <strong>class-based</strong> application)
         </p>
