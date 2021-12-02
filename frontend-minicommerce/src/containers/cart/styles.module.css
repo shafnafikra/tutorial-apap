@@ -32,3 +32,14 @@
   margin: 16px 0;
   resize: none;
 }
+
+.back {
+  background-color: #346cce;
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  background-color: #346cce;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

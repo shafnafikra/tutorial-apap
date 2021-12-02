@@ -4,6 +4,8 @@ import APIConfig from "../../api/APIConfig";
 import Button from "../../components/button";
 import { Link } from 'react-router-dom';
 import CartItem from "../../components/CartItem";
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 class Cart extends Component {
     constructor(props) {
@@ -48,8 +50,11 @@ class Cart extends Component {
             <div className={classes.itemList}> 
                 <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
                 <Link to="/">
-                    <Button>
-                        Back
+                    <Button variant="back">
+                        <div style={{display:"flex", alignItems:"center"}}>
+                        <KeyboardBackspaceIcon />
+                        <p>Back</p>
+                        </div>
                     </Button>
                 </Link>
                 <h1 className={classes.title}>
@@ -58,11 +63,19 @@ class Cart extends Component {
                 <div>
                     {this.state.items.length > 0 && (
                         <Button action={this.handleCheckout}>
-                            Checkout
+                            <div style={{display:"flex", alignItems:"center"}}>
+                            <PointOfSaleIcon/> 
+                            <p>Checkout</p>
+                            </div>
                         </Button>
                     )}
                 </div>
             </div>
+                <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
+                    {this.state.items.length === 0 && (
+                        <h2> Belum ada item </h2>
+                    )}
+                </div>
                 <div>
                     {this.state.items.map((item) => (
                     <CartItem

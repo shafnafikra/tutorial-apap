@@ -17,16 +17,19 @@ return (
     <Button action={() => handleDelete(id)}>
         Delete
     </Button>
-    <form> 
+    <form>
+        <div className={classes.flex}>
         <input
+            className={classes.textField}
             type="number"
-            placeholder="" 
+            placeholder="Jumlah item .." 
             name="jumlahItem"
             onChange={(e) => handleAmountChange(e.target.value, id, quantity)} 
         />
-        <Button action={handleAddToCart}>
+        <Button action={handleAddToCart} variant="button-custom">
             Add To Cart
         </Button>
+        </div>
     </form>
 </div>
 );
