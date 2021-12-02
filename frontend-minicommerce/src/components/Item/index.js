@@ -19,11 +19,9 @@ return (
     </Button>
     <form> 
         <input
-            //className={classes.textField} 
             type="number"
             placeholder="" 
             name="jumlahItem"
-            //value={amount} 
             onChange={(e) => handleAmountChange(e.target.value, id, quantity)} 
         />
         <Button action={handleAddToCart}>
