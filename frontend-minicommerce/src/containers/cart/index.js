@@ -36,6 +36,7 @@ class Cart extends Component {
         try {
             await APIConfig.get("/cart/checkout");
             this.loadCartData();
+            alert("Berhasil Checkout!");
         } catch (error) {
             alert("Oops terjadi masalah pada server");
             console.log(error);

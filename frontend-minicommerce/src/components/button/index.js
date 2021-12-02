@@ -5,8 +5,11 @@ const Button = (props) => {
     const { action, children } = props;
  return (
    <button
-   onClick={action}>
-     {children}
+   onClick={action}
+            className={`${classes.button} ${classes.primary} ${
+                children === "Cancel" ? classes.danger : ""
+            } ${children === "Create" ? classes.success : ""} `}>
+            {children}
    </button>
  );
 }
