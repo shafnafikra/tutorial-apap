@@ -33,21 +33,21 @@ this.setState({
 
 ![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/1.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/2.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/2.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/3.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/3.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/4.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/4.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/5.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/5.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/6.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/6.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/7.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/7.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/8.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/8.jpeg)
 
-![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/9.jpeg)
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/9.jpeg)
 
 ### Pertanyaan 4: Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount. Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja yang biasanya menggunakan lifecycle method tersebut”.
 
