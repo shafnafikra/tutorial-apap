@@ -31,15 +31,23 @@ this.setState({
 
 ### Pertanyaan 3: Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini.
 
-![](screenshot/tutorial-8/1.jpeg)
-![](screenshot/tutorial-8/2.jpeg)
-![](screenshot/tutorial-8/3.jpeg)
-![](screenshot/tutorial-8/4.jpeg)
-![](screenshot/tutorial-8/5.jpeg)
-![](screenshot/tutorial-8/6.jpeg)
-![](screenshot/tutorial-8/7.jpeg)
-![](screenshot/tutorial-8/8.jpeg)
-![](screenshot/tutorial-8/9.jpeg)
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/1.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/2.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/3.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/4.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/5.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/6.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/7.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/8.jpeg)
+
+![](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-7-frontend/ScreenShot/tutorial-8/9.jpeg)
 
 ### Pertanyaan 4: Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount. Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja yang biasanya menggunakan lifecycle method tersebut”.
 
