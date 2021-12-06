@@ -78,16 +78,12 @@ export default class Home extends React.Component {
         <h1 className="text-center mt-3 mb-0">Mini Commerce</h1>
         <div style={{ position: "fixed", top: 25, right: 25 }}>
           <Fab variant="extended" onClick={this.handleToggle}>
-            {this.state.cartHidden ? (
               <Badge
                 color="secondary"
                 badgeContent={this.state.cartItems.length}
               >
                 <ShoppingCartIcon />
               </Badge>
-            ) : (
-              <ViewStreamIcon />
-            )}
           </Fab>
         </div>
         <p className="text-center text-secondary text-sm font-italic">

@@ -6,6 +6,59 @@
 
 ---
 
+# Tutorial 8
+
+### Pertanyaan 1: Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
+
+pada latihan nomor 1 diminta untuk solve masalah dimana saat kembali menekan tombol "Add New Item" masih terdapat value dari item sebelumnya. Hal ini bisa terjadi karena statenya masih berissi value item sebelumnya. Sehingga, pada latihan ini, saya mengosongkan statenya kembali, kemudian melakukan this.loadData(). Dengan demikian, saat membuka modal tersebut nantinya form fieldnya kosong.
+Berikut code untuk langkah-langkah tersebut.
+
+```
+this.setState({
+   title: "",
+   price: 0,
+   description: "",
+   category: "",
+   quantity: 0
+})
+
+```
+
+### Pertanyaan 2: Jelaskan fungsi dari async dan await!
+
+- _async_ berarti asynchronous, async merupakan sebuah fungsi yang bertujuan untuk mengatasi permasalahan asynchronous yang ada di Javascript. Async akan otomatis mengembalikan return value berupa obek dengan tipe Promise, dengan kondisi lain dapat jufa ditolak dengan uncaught error dan bisa menggunakan 'await'
+- _await_ berfungsi untuk program dapat mengetahui untuk keluar secara sementara dari fungsi async baru kemuduan melanjutkan programnya saat task telah selesai.
+
+### Pertanyaan 3: Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini.
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/1.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/2.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/3.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/4.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/5.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/6.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/7.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/8.jpeg)
+
+![alt text](https://github.com/shafnafikra/tutorial-apap/blob/feat/tutorial-8-frontend/ScreenShot/tutorial-8/9.jpeg)
+
+### Pertanyaan 4: Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount. Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja yang biasanya menggunakan lifecycle method tersebut”.
+
+- _componentDidMount_ : sebuah komponen Lifecycle yang digunakan untuk mengambil data. Selain itu juga digunakan untuk menandakan akhir dari tahapan mounting lifecycle. Dipanggil setelah render HTML selesai loading. Fungsi ini dapat dipakai untuk memngambil data dari API website lain, kemudian di-render.
+- _shouldComponentUpdate_ : sebuah komponen Lifecycle yang digunakan dalam menentukan perubahan yang terjadi di component apakah akan ditampilkan atau tidak. Fungsi ini dijalankan setelah state component menalami perubahan dan sebelum rendering. Contoh penggunaannya pada saat ingin mengubah komponen dan rendering setiap ada perubahan state.
+- _componentDidUpdate_ : Digunakan saat melakukan interaksi dengan browser atau API. Dijalankan pada saat rendering HTML selesai melakukan loading dan satu instance dalam komponen melakukan update. Contoh penggunaannya saat update suatu komponen, seperti pada saat mengupdate jumlah quantity yang dimiliki oleh item barang.
+- _componentWillReceiveProps_ : Dapat melakukan perubahan state berdasarkan dengan props saat ini dan props yang baru. Dijalankan ketika terjadi perubahan pada props sebelum component di-render dan dipanggul saat komponen akan menerima props. Contoh penggunaanya saat ingin melakukan reset state.
+- _componentWillUnmount_ : dapat melakukan pembersihan timer yang tidak valid, membatalkan permintaan jaringan, dan pembatalan permintaan jaringan saat terdapat action yang berkaitan dengan cleanup. Dijalankan saat ada component yang dihapus dari DOM. Contoh penggunaannya saat menghapus interval waktu fungsi berjalan.
+
+---
+
 # Tutorial 7
 
 ### Pertanyaan 1: Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
